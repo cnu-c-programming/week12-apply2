@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main(void) {
+int main(int argc, const char* argv[]) {
     if (argc < 2)
     {
         return 0;
@@ -17,6 +17,6 @@ int main(void) {
     fclose(fp);
 
     printf("%s\n", buffer);
-    
+
     return 0;
 }
