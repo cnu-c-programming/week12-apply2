@@ -5,7 +5,7 @@ int main(int argc, const char* argv[], const char* envp[]) {
 
     while (*filename != NULL)
     {
-        printf("%s\n," *filename);
+        printf("%s\n", *filename);
         filename++;
     }
     
