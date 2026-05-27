@@ -13,7 +13,7 @@ int main(int argc, const char* argv[]) {
     {
         if (strstr(line, target_str) != NULL)
         {
-            printf("%s\n", line);
+            printf("%s", line);
         }
     }
     
