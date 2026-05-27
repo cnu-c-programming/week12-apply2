@@ -26,16 +26,15 @@ int main(int argc, const char* argv[]) {
 
     for (int i = 0; i < count; i++)
     {
-        if (students[i+1].score != NULL && students[i].score < students[i+1].score)
+        if (students[i].score > max)
         {
-            max = students[i+1].score;
+            max = students[i].score;
         }
-        
     }
 
     for (int i = 0; i < count; i++)
     {
-        avg += students[count].score;
+        avg += students[i].score;
     }
     avg = avg/count;
     
