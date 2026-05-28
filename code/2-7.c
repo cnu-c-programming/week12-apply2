@@ -11,8 +11,8 @@ typedef struct config {
 
 void config_parser(Config* config_ptr) {
     FILE *fp = fopen("config.txt", "r");
-    char line;
-    char key[2], value[2];
+    char line[256];
+    char key[64], value[64];
     while (fgets(line, sizeof line, fp))
     {
         if (sscanf(line, "%[^=]=%s", key, value) == 2) {
