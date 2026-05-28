@@ -12,12 +12,13 @@ int main(int argc, const char* argv[]) {
     char line[256];
     while (fgets(line, sizeof line, fp) != NULL)
     {
+        int num = 0;
         if (sscanf(line, "%d", &num) == 1)
         {
             sum = num + sum;
         }
 
-        else fprintf(stderr, "invalid input %"s, line);
+        else fprintf(stderr, "invalid input %s", line);
     }
 
     printf("sum: %d\n", sum);
