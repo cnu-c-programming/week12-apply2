@@ -8,9 +8,17 @@ int main(int argc, const char* argv[]) {
         return 0;
     }
 
-
     int sum = 0;
+    char line[256];
+    while (fgets(line, sizeof line, fp) != NULL)
+    {
+        if (sscanf(line, "%d", &num) == 1)
+        {
+            sum = num + sum;
+        }
 
+        else fprintf(stderr, "invalid input %d", line);
+    }
 
     printf("sum: %d\n", sum);
     fclose(fp);
